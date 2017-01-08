@@ -12,6 +12,8 @@ class Kata02FileSource {
      * <p/>
      * Tip: The direct relative path to the file usually src/main/resources/kata02.txt when using an IDE.
      * <p/>
+     * Tip: http://doc.akka.io/docs/akka/2.4.16/java/stream/stream-cookbook.html#Logging_elements_of_a_stream
+     * <p/>
      * Reference: http://doc.akka.io/docs/akka/2.4.16/java/stream/stream-io.html#Streaming_File_IO
      * <p/>
      * Check: The kata is solved when the corresponding unit test is green.
