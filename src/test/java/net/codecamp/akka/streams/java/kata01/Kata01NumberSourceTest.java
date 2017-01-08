@@ -68,17 +68,13 @@ public class Kata01NumberSourceTest {
 
     @Test
     public void expectSourceOfNaturalNumbers1to10() throws InterruptedException, ExecutionException, TimeoutException {
-
         final ActorSystem system = ActorSystem.create("Kata01NumberSourceTest");
-
         final Materializer materializer = ActorMaterializer.create(system);
 
         Source<Integer, NotUsed> source = Kata01NumberSource.createSourceOfNaturalNumbers1to10();
-
         assertNotNull("Source must not be null.", source);
 
         List<Integer> list = new ArrayList<>();
-
         Sink<Integer, CompletionStage<Done>> sink = Sink.foreach(list::add);
 
         CompletionStage<Done> completionStage = source.runWith(sink, materializer);

@@ -72,19 +72,14 @@ public class Kata02FileSourceTest {
 
     @Test
     public void expectSourceOfLinesInFileKata02Txt() throws InterruptedException, ExecutionException, TimeoutException {
-
         final ActorSystem system = ActorSystem.create("Kata02FileSourceTest");
-
         final Materializer materializer = ActorMaterializer.create(system);
 
         Source<String, CompletionStage<IOResult>> source = Kata02FileSource.createSourceOfLinesInFileKata02Txt();
-
         assertNotNull("Source must not be null.", source);
 
         List<String> list = new ArrayList<>();
-
         Sink<String, CompletionStage<Done>> sink = Sink.foreach(list::add);
-
         RunnableGraph<Pair<CompletionStage<IOResult>, CompletionStage<Done>>> g = source.toMat(sink, Keep.both());
 
         Pair<CompletionStage<IOResult>, CompletionStage<Done>> p = g.run(materializer);
