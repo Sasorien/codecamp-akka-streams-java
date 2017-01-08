@@ -1,6 +1,5 @@
-# Code Camp Akka Streams using Java DSL
+# Code Camp Akka Streams Java
 
-Code Camp for using Akka Streams via its Java DSL for stream processing.
+Code Camp about using Akka Streams via its Java DSL.
 
 Kafka is used to persist streams.
-

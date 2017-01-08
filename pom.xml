@@ -6,7 +6,7 @@
     <groupId>net.codecamp.akka.streams.java</groupId>
     <artifactId>codecamp-akka-streams-java</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <description>Code Camp for using Akka Streams via its Java DSL for stream processing.</description>
+    <description>Code Camp about using Akka Streams via its Java DSL.</description>
 
     <properties>
         <java.version>1.8</java.version>
