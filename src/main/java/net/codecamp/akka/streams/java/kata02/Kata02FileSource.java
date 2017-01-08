@@ -10,7 +10,7 @@ class Kata02FileSource {
     /**
      * Task: Create a akka.stream.javadsl.Source that emits line by line of kata02.txt file.
      * <p/>
-     * Tip: The direct relative path to the file usually src/main/resources/kata02.txt when using an IDE.
+     * Tip: The direct relative path to the file is usually src/main/resources/kata02.txt when using an IDE.
      * <p/>
      * Tip: http://doc.akka.io/docs/akka/2.4.16/java/stream/stream-cookbook.html#Logging_elements_of_a_stream
      * <p/>

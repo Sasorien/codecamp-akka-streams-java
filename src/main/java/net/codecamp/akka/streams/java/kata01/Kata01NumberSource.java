@@ -8,7 +8,7 @@ class Kata01NumberSource {
     /**
      * Task: Create a akka.stream.javadsl.Source that emits the first ten natural numbers before completing.
      * <p/>
-     * Tip: use the appropriate static factory method to be found in akka.stream.javadsl.Source to create the source.
+     * Tip: Use the appropriate static factory method to be found in akka.stream.javadsl.Source to create the source.
      * <p/>
      * Reference: http://doc.akka.io/docs/akka/2.4.16/java/stream/stream-flows-and-basics.html
      * <p/>
