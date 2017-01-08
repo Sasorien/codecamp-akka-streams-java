@@ -85,6 +85,7 @@ public class Kata02FileSourceTest {
         Pair<CompletionStage<IOResult>, CompletionStage<Done>> p = g.run(materializer);
 
         CompletableFuture<IOResult> completableFuture1 = p.first().toCompletableFuture();
+        assertTrue("Done.", completableFuture1.isDone());
         assertFalse("Completed exceptionally.", completableFuture1.isCompletedExceptionally());
         assertFalse("Canceled.", completableFuture1.isCancelled());
         IOResult ioResult = completableFuture1.get(1, TimeUnit.SECONDS);
@@ -92,6 +93,7 @@ public class Kata02FileSourceTest {
 
         CompletableFuture<Done> completableFuture2 = p.second().toCompletableFuture();
         completableFuture2.get(1, TimeUnit.SECONDS);
+        assertTrue("Done.", completableFuture2.isDone());
         assertFalse("Completed exceptionally.", completableFuture2.isCompletedExceptionally());
         assertFalse("Canceled.", completableFuture2.isCancelled());
         assertEquals(10, list.size());

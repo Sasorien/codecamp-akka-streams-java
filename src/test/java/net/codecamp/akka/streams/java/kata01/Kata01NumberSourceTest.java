@@ -21,6 +21,7 @@ import java.util.concurrent.TimeoutException;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 public class Kata01NumberSourceTest {
 
@@ -80,6 +81,7 @@ public class Kata01NumberSourceTest {
         CompletionStage<Done> completionStage = source.runWith(sink, materializer);
         CompletableFuture<Done> completableFuture = completionStage.toCompletableFuture();
         completableFuture.get(1, TimeUnit.SECONDS);
+        assertTrue("Done.", completableFuture.isDone());
         assertFalse("Completed exceptionally.", completableFuture.isCompletedExceptionally());
         assertFalse("Canceled.", completableFuture.isCancelled());
         assertEquals(10, list.size());
