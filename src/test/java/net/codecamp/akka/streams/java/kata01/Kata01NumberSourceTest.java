@@ -25,7 +25,7 @@ import static org.junit.Assert.assertNotNull;
 public class Kata01NumberSourceTest {
 
     /*
-    . Please do not read this test case while solving any of the katas! Spoiler warning!
+    . Please do not read this test code while solving any of the katas! Spoiler warning!
     .
     . Just run it with right-click on the test class name above.
     .
