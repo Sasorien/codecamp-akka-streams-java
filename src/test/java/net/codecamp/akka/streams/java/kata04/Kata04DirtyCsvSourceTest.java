@@ -76,7 +76,7 @@ public class Kata04DirtyCsvSourceTest {
 
     @Test
     public void expectRobustFlowOfStringToTemperatureReading() throws InterruptedException, ExecutionException, TimeoutException {
-        final ActorSystem system = ActorSystem.create("Kata03CsvSourceTest");
+        final ActorSystem system = ActorSystem.create("Kata04DirtyCsvSourceTest");
         final Materializer materializer = ActorMaterializer.create(system);
 
         Source<String, CompletionStage<IOResult>> source = Kata04DirtyCsvSource.createSourceOfLinesInFileKata04Csv();
