@@ -3,7 +3,7 @@ package net.codecamp.akka.streams.java.kata01;
 import akka.NotUsed;
 import akka.stream.javadsl.Source;
 
-class Kata01Source {
+class Kata01NumberSource {
 
     /**
      * Task: Create a akka.stream.javadsl.Source that emits the first ten natural numbers before completing.

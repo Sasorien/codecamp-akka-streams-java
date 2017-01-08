@@ -22,7 +22,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 
-public class KataSourceTest {
+public class Kata01NumberSourceTest {
 
     /*
     . Please do not read this test case while solving any of the katas! Spoiler warning!
@@ -67,13 +67,13 @@ public class KataSourceTest {
     */
 
     @Test
-    public void expectSourceNaturalNumbers1to10() throws InterruptedException, ExecutionException, TimeoutException {
+    public void expectSourceOfNaturalNumbers1to10() throws InterruptedException, ExecutionException, TimeoutException {
 
-        final ActorSystem system = ActorSystem.create("KataSourceTest");
+        final ActorSystem system = ActorSystem.create("Kata01NumberSourceTest");
 
         final Materializer materializer = ActorMaterializer.create(system);
 
-        Source<Integer, NotUsed> source = Kata01Source.createSourceOfNaturalNumbers1to10();
+        Source<Integer, NotUsed> source = Kata01NumberSource.createSourceOfNaturalNumbers1to10();
 
         assertNotNull("Source must not be null.", source);
 
@@ -82,17 +82,11 @@ public class KataSourceTest {
         Sink<Integer, CompletionStage<Done>> sink = Sink.foreach(list::add);
 
         CompletionStage<Done> completionStage = source.runWith(sink, materializer);
-
         CompletableFuture<Done> completableFuture = completionStage.toCompletableFuture();
-
         completableFuture.get(1, TimeUnit.SECONDS);
-
         assertFalse("Completed exceptionally.", completableFuture.isCompletedExceptionally());
-
         assertFalse("Canceled.", completableFuture.isCancelled());
-
         assertEquals(10, list.size());
-
         assertEquals(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), list);
     }
 
