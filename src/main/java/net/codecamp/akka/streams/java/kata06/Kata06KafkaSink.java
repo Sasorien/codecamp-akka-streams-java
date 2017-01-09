@@ -15,6 +15,8 @@ class Kata06KafkaSink {
      * Task: Create a akka.stream.javadsl.Sink that writes each element
      * to the Kafka topic named kata06-topic to the partition 0.
      * <p/>
+     * Tip: See the README.md for additional instructions regarding Kafka.
+     * <p/>
      * Tip: To start Kafka execute in the project root directory: docker-compose up -d
      * <p/>
      * Tip: For the Kafka client port see in the project root directory: docker-compose.yml

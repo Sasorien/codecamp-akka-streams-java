@@ -13,7 +13,7 @@ class Kata03CsvSource {
     /**
      * Task: Create a akka.stream.javadsl.Source that emits line by line of kata03.csv file.
      * <p/>
-     * Reference: See kata 02.
+     * Reference: See kata02.
      *
      * @return The source.
      */
