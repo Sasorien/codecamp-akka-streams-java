@@ -34,7 +34,7 @@ class Kata06KafkaSink {
      * <p/>
      * Check: The kata is solved when the corresponding unit test is green.
      *
-     * @return The source.
+     * @return The sink.
      */
     static Sink<ProducerRecord<String, String>, CompletionStage<Done>> createKafkaSink() {
         return null;

@@ -26,7 +26,7 @@ class Kata04DirtyCsvSource {
      * The flow must not stop the stream with a failure when a line with a data problem is encountered.
      * Instead, each line that fails to be transformed into a {@link TemperatureReading} must be skipped.
      * <p/>
-     * Reference: http://doc.akka.io/docs/akka/2.4.16/java/stream/stream-error.html
+     * Reference: http://doc.akka.io/docs/akka/current/java/stream/stream-error.html
      * <p/>
      * Check: The kata is solved when the corresponding unit test is green.
      *

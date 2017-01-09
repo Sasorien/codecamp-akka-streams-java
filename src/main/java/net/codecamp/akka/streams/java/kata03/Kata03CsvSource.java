@@ -28,7 +28,7 @@ class Kata03CsvSource {
      * created by {@link Kata03CsvSource#createSourceOfLinesInFileKata03Csv()}.
      * Thus the flow needs to expect and treat the string to be in the format of a line in the given CSV file.
      * <p/>
-     * Reference: http://doc.akka.io/docs/akka/2.4.16/java/stream/stream-flows-and-basics.html#Defining_sources__sinks_and_flows
+     * Reference: http://doc.akka.io/docs/akka/current/java/stream/stream-flows-and-basics.html#Defining_sources__sinks_and_flows
      * <p/>
      * Check: The kata is solved when the corresponding unit test is green.
      *
