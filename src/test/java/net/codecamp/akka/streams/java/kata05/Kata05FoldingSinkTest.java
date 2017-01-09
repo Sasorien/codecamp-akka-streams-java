@@ -66,7 +66,7 @@ public class Kata05FoldingSinkTest {
     @Test
     public void expectFoldingSinks()
             throws InterruptedException, ExecutionException, TimeoutException {
-        final ActorSystem system = ActorSystem.create("Kata01NumberSourceTest");
+        final ActorSystem system = ActorSystem.create("Kata05FoldingSinkTest");
         final Materializer materializer = ActorMaterializer.create(system);
 
         final Sink<Integer, CompletionStage<Integer>> sinkA = Kata05FoldingSink.createFoldingSinkWithAddition();
