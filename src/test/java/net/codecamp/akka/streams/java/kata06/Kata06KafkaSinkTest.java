@@ -40,6 +40,48 @@ import static org.junit.Assert.assertTrue;
 
 public class Kata06KafkaSinkTest {
 
+    /*
+    . Please do not read this test code while solving any of the katas! Spoiler warning!
+    .
+    . Just run it with right-click on the test class name above.
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    */
+
     private static final String KATA06_RECORD = "kata06-record";
     private static final String KATA06_TOPIC = "kata06-topic";
     private static final int KATA06_PARTITION = 0;

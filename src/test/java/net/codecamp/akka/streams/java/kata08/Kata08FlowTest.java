@@ -28,6 +28,48 @@ import static org.junit.Assert.assertTrue;
 
 public class Kata08FlowTest {
 
+    /*
+    . Please do not read this test code while solving any of the katas! Spoiler warning!
+    .
+    . Just run it with right-click on the test class name above.
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    */
+
     @Test
     public void expectStringLengthFlow() throws InterruptedException, ExecutionException, TimeoutException {
         final ActorSystem system = ActorSystem.create("Kata08FlowTest");

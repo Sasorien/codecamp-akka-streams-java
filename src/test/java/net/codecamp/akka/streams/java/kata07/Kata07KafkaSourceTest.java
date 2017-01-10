@@ -42,6 +42,48 @@ import static org.junit.Assert.assertTrue;
 
 public class Kata07KafkaSourceTest {
 
+    /*
+    . Please do not read this test code while solving any of the katas! Spoiler warning!
+    .
+    . Just run it with right-click on the test class name above.
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    */
+
     private static final String KATA07_RECORD = "kata07-record";
     private static final String KATA07_TOPIC = "kata07-topic";
     private static final int KATA07_PARTITION = 0;
