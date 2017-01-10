@@ -98,6 +98,8 @@ public class Kata07KafkaSourceTest {
 
         // produce some
         produce(materializer, 10);
+        // wait for production to really complete
+        Thread.sleep(2000);
 
         // consume all elements currently in the topic
         {
@@ -117,6 +119,8 @@ public class Kata07KafkaSourceTest {
         // produce new
         final int toProduce = 10;
         produce(materializer, toProduce);
+        // wait for production to really complete
+        Thread.sleep(2000);
 
         // consume just the first 5 new records
         {
@@ -135,6 +139,9 @@ public class Kata07KafkaSourceTest {
                     = source.viaMat(flowTake5, Keep.left()).toMat(sink2, Keep.both());
             consume(materializer, g2, resultList2, 0, 4, true);
         }
+
+        // wait shortly in between consumptions
+        Thread.sleep(500);
 
         // consume the rest of the new records from the stored offset to the latest
         {
@@ -169,7 +176,7 @@ public class Kata07KafkaSourceTest {
         CompletionStage<Done> producerCompletitionStage = producerRecordSource.runWith(producerSink, materializer);
 
         // wait for production to complete
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         CompletableFuture<Done> producerFuture = producerCompletitionStage.toCompletableFuture();
         producerFuture.get(1, TimeUnit.SECONDS);
         assertTrue("Done.", producerFuture.isDone());
@@ -207,7 +214,7 @@ public class Kata07KafkaSourceTest {
         if (!done) {
             CompletionStage<Done> shutdownCompletionStage = control.shutdown();
             CompletableFuture<Done> shutdownFuture = shutdownCompletionStage.toCompletableFuture();
-            shutdownFuture.get(2, TimeUnit.SECONDS);
+            shutdownFuture.get(5, TimeUnit.SECONDS);
             assertTrue("Done.", shutdownFuture.isDone());
             assertFalse("Completed exceptionally.", shutdownFuture.isCompletedExceptionally());
             assertFalse("Canceled.", shutdownFuture.isCancelled());
@@ -248,7 +255,8 @@ public class Kata07KafkaSourceTest {
         return ProducerSettings.create(system, new StringSerializer(), new StringSerializer())
                 .withBootstrapServers(KAFKA_IP_OR_HOST + ":" + KAFKA_CLIENT_PORT)
                 .withParallelism(1)
-                .withProperty("max.in.flight.requests.per.connection", "1");
+                .withProperty("max.in.flight.requests.per.connection", "1")
+                .withProperty("batch.size", "0");
     }
 
     private static ConsumerSettings<String, String> createConsumerSettings(final ActorSystem system,
