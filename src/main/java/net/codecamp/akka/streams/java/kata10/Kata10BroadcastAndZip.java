@@ -18,10 +18,10 @@ class Kata10BroadcastAndZip {
      * <ul>
      * <li>It starts with source {@link #createSource()}</li>.
      * <li>It forks via a broadcasting uniform fan out into three branches.</li>.
-     * <li>Branch 1 goes via {@link #createFlow0_0()}
+     * <li>Branch 0 goes via {@link #createFlow0_0()}
      * and then {@link #createFlow0_1()}.</li>.
-     * <li>Branch 2 just goes via {@link #createFlow1_0()}.</li>.
-     * <li>Branch 3 goes via {@link #createFlow2_0()}
+     * <li>Branch 1 just goes via {@link #createFlow1_0()}.</li>.
+     * <li>Branch 2 goes via {@link #createFlow2_0()}
      * and {@link #createFlow2_1()}
      * and then {@link #createFlow2_2()}.</li>.
      * <li>It joins the three branches again via a zipping fan in
