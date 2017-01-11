@@ -73,7 +73,7 @@ public class Kata09FanInShapeTest {
 
     @Test
     public void expectFanInShape2() throws InterruptedException {
-        final ActorSystem system = ActorSystem.create("Kata08FlowTest");
+        final ActorSystem system = ActorSystem.create("Kata09FanInShapeTest");
         final Materializer materializer = ActorMaterializer.create(system);
 
         Graph<FanInShape2<String, Integer, Pair<String, Integer>>, NotUsed> fanInShape2Graph
