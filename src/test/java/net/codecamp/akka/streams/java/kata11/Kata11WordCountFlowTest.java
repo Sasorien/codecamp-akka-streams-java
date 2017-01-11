@@ -26,12 +26,12 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-import static net.codecamp.akka.streams.java.kata11.Kata11WordCount.createWordCountFlow;
+import static net.codecamp.akka.streams.java.kata11.Kata11WordCountFlow.createWordCountFlow;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-public class Kata11WordCountTest {
+public class Kata11WordCountFlowTest {
 
     /*
     . Please do not read this test code while solving any of the katas! Spoiler warning!
@@ -77,7 +77,7 @@ public class Kata11WordCountTest {
 
     @Test
     public void expectWordCountFlow() throws InterruptedException, TimeoutException, ExecutionException {
-        final ActorSystem system = ActorSystem.create("Kata10BroadcastAndZipTest");
+        final ActorSystem system = ActorSystem.create("Kata11WordCountFlowTest");
         final Materializer materializer = ActorMaterializer.create(system);
 
         Source<String, CompletionStage<IOResult>> wordSource = createFile2WordsSource("src/main/resources/kata11.txt");

@@ -4,7 +4,7 @@ import akka.NotUsed;
 import akka.japi.Pair;
 import akka.stream.javadsl.Flow;
 
-class Kata11WordCount {
+class Kata11WordCountFlow {
 
     /**
      * Task: Create a akka.stream.javadsl.Flow for word count, i.e. with input type String
