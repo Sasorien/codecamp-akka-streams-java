@@ -18,13 +18,11 @@ by using the command `export SERVER_IP_OR_HOST=<value>`.
 
 In the source code change `constants.Constants.KAFKA_IP_OR_HOST` to the same value.
 
-####### Linux or Windows
+Launch with the command `docker-compose up -d`
 
-`docker-compose up -d`
+##### See Logging Output
 
-####### Docker for Mac
-
-`docker-compose up -d`
+Use the command described at https://docs.docker.com/engine/reference/commandline/logs/
 
 ##### List Topics
 
