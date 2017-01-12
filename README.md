@@ -38,6 +38,10 @@ In the source code change `constants.Constants.KAFKA_IP_OR_HOST` to the same val
 
 `docker exec -ti codecamp-akka-streams-java-kafka-01-c /usr/bin/kafka-topics --create --zookeeper codecamp-akka-streams-java-zookeeper4kafka-01-s:44776 --topic kata06-topic --partitions 1 --replication-factor 1`
 
-##### Stop Kafka
+##### Stop Kafka and remove all Docker volumes and thus wipe all data
+
+`docker-compose down -v`
+
+##### Stop Kafka keeping data
 
 `docker-compose down`
