@@ -87,7 +87,7 @@ public class Kata12CSV2ListOfListsGraphTest {
         assertEquals(4, list.size());
 
         list.forEach(Assert::assertNotNull);
-        list.forEach(l -> assertEquals(4, l.size()));
+        list.forEach(l -> assertEquals(5, l.size()));
 
         List<String> uuids = Arrays.asList("548e841a-6d98-4591-b4f9-3cc6ec04776d",
                 "d7256984-06bf-4bec-983c-428239dd0cce", "1d651905-0d0d-4c0c-ad93-49f893b209ca",
